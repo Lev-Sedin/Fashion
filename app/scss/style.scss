@@ -1,0 +1,242 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+  
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+  
+:focus,
+:active {
+    outline: none;
+}
+  
+a:focus,
+a:active {
+    outline: none;
+}
+  
+nav,
+footer,
+header,
+aside {
+    display: block;}
+  
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+  
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+  
+input::-ms-clear {
+    display: none;
+}
+  
+button {
+    cursor: pointer;
+}
+  
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+  
+a,
+a:visited {
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: none;
+}
+  
+ul li {
+    list-style: none;
+}
+  
+img {
+    vertical-align: top;
+}
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+h2{
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+body{
+    font-family: 'Jost', sans-serif;
+    height: 100vh;
+}
+main{
+    overflow: hidden;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+
+}
+.container{
+    height: 100%;
+    width: 50%;
+}
+.left{
+    background-image: url("../images/IMG_2389\ 1.png");
+    background-size: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 105%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 58px 0 141px 51px;
+}
+.right{
+    background-image: url("../images/IMG_8316\ 1.png");
+    background-size: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 105%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 58px 0 141px 51px;
+}
+.link{
+    display: flex;
+    align-items: center;
+    &-text{
+        color: #FFF;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 114%;
+        letter-spacing: 0.88px;
+        margin-right: 15px;
+        text-transform: uppercase;
+    }
+    &-arrow{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    &-arrow__container{
+        position: relative;
+        width: 36px;
+        height: 2px;
+        background-color: #FFFFFF;
+        left: 0;
+        display: block;
+        transition: all 1s ease;
+    }
+    &-arrow__container::before {
+        content: '';       
+        position: absolute;       
+        width: 11px;        
+        height: 2px;        
+        top: 4px;       
+        right: -3px;       
+        background-color: #FFFFFF;            
+        transform: rotate(-45deg); 
+        }
+        
+    &-arrow__container::after {       
+        content: '';    
+        position: absolute;   
+        width: 11px;        
+        height: 2px;  
+        top: -4px;       
+        right: -3px;       
+        background-color: #FFFFFF;        
+        transform: rotate(45deg);        
+        }
+    &:hover > &-arrow > &-arrow__container{
+        width: 129px ;
+    }
+}
+.btn{
+    width: 168px;
+    height: 44px;
+    padding: 13px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 114%;
+    letter-spacing: 0.64px;
+    &-contact{
+        margin-left: 397px;
+        border: 2px solid #FFF;
+        background: transparent;
+        color: #FFF;
+        transition: all 0.5s ease;
+    }
+    &-contact:hover{
+        opacity: 0.5;
+    }
+}
+.menu{
+    &-zone{
+        width: 330px;
+        height: 280px;
+        position: relative;
+        top: 10px;
+    }
+    &-title{
+        color: #FFF;
+    }
+    &-contacts{
+        margin: 50px 0;
+    }
+    &-contact{
+        display: flex;
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    &-contact__number{
+        color: #FFF;
+        text-decoration: underline;
+    }
+    &-contact:nth-child(2){
+        padding: 10px 0;
+    }
+    &-links{
+        display: flex;
+        
+    }
+    &-link:nth-child(2){
+        padding: 0 12px;
+    }
+    &-link:hover{
+        transition: all 0.5s ease;
+        opacity: 0.5;
+    }
+}
