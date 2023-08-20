@@ -115,7 +115,7 @@ main{
     height: 105%;
     width: 50%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
     padding: 58px 0 141px 51px;
 }
@@ -127,7 +127,7 @@ main{
     height: 105%;
     width: 50%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
     padding: 58px 0 141px 51px;
 }
@@ -182,7 +182,11 @@ main{
     &:hover > &-arrow > &-arrow__container{
         width: 129px ;
     }
+    &-unactive__one, &-unactive__two{
+        display: none;
+    }
 }
+
 .btn{
     width: 168px;
     height: 44px;
@@ -191,6 +195,9 @@ main{
     font-weight: 500;
     line-height: 114%;
     letter-spacing: 0.64px;
+    position: absolute;
+    top: 43px;
+    right: 53px;
     &-contact{
         margin-left: 397px;
         border: 2px solid #FFF;
@@ -198,7 +205,18 @@ main{
         color: #FFF;
         transition: all 0.5s ease;
     }
+    &-contact__unactive{
+        display: none;
+    }
     &-contact:hover{
+        opacity: 0.5;
+    }
+    &-closed{
+        background-color: transparent;
+        display: inline;
+    }
+    &-photo:hover{
+        transition: all 0.5s ease;
         opacity: 0.5;
     }
 }
@@ -207,7 +225,8 @@ main{
         width: 330px;
         height: 280px;
         position: relative;
-        top: 10px;
+        top: 157px;
+        right: -84px;
     }
     &-title{
         color: #FFF;
@@ -238,5 +257,43 @@ main{
     &-link:hover{
         transition: all 0.5s ease;
         opacity: 0.5;
+    }
+}
+.nav{
+    position: absolute;
+    width: 100vw;
+    &-logo{
+        position: absolute;
+        top: 40px;
+        left: 43px;
+    }
+    &-menu__mobile{
+        position: absolute;
+        top: -40px;
+        right: -100%;
+        display: block;
+        transition: all 0.5s ease;
+        &::before{
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.50);
+            z-index: -1;
+        }
+    }
+
+    &-menu__mobile-active{
+        right: 25%;
+        transition: all 1s ease;
+        z-index: 0;
+
+    }
+    &-menu__btn{
+        position: absolute;
+        top: 25%;
+        right: -50%;
     }
 }
