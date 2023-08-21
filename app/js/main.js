@@ -23,4 +23,39 @@ const menu = () =>{
     })
 }
 
-menu() //паралакс
+menu()
+
+const blur = () =>{
+const box = document.querySelector(".container")
+const leftPart = document.querySelector(".container-background__left")
+const rightPart = document.querySelector(".container-background__right")
+const btn = document.querySelector(".btn-contact")
+const logo = document.querySelector(".nav-logo")
+
+leftPart.addEventListener("mouseover", function(){
+    rightPart.style.filter = 'blur(3px)';
+})
+leftPart.addEventListener("mouseleave", function(){
+    rightPart.style.filter = 'blur(0px)';
+})
+rightPart.addEventListener("mouseover", function(){
+    leftPart.style.filter = 'blur(3px)';
+})
+rightPart.addEventListener("mouseleave", function(){
+    leftPart.style.filter = 'blur(0px)';
+})
+btn.addEventListener("mouseover", function(){
+    leftPart.style.filter = 'blur(3px)';
+})
+btn.addEventListener("mouseleave", function(){
+    leftPart.style.filter = 'blur(0px)';
+})
+logo.addEventListener("mouseover", function(){
+    rightPart.style.filter = 'blur(3px)';
+})
+logo.addEventListener("mouseleave", function(){
+    rightPart.style.filter = 'blur(0px)';
+})
+}
+
+blur()
