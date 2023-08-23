@@ -267,9 +267,22 @@ main{
     &-link:nth-child(2){
         padding: 0 12px;
     }
-    &-link:hover{
+    
+    &-link__logo{ 
+        width: 41px;
+        height: 41px;
+        background: transparent;
+        border: 2px solid #B6615C;
+        border-radius: 50%;
+        padding: 6px 0px;
+        fill: #B6615C;
         transition: all 0.5s ease;
-        opacity: 0.5;
+    }
+    &-link__logo:hover{
+        background: #B6615C;
+        border: 2px solid #B6615C;
+        fill: white;
+
     }
 }
 .nav{
@@ -289,7 +302,7 @@ main{
         top: -40px;
         right: -100%;
         display: block;
-        transition: all 1s ease;
+        transition: all 0.5s ease;
         &::before{
             content: '';
             position: fixed;
@@ -304,7 +317,6 @@ main{
 
     &-menu__mobile-active{
         right: 25%;
-        transition: all 1s ease;
         z-index: 3;
 
     }
@@ -435,17 +447,23 @@ main{
     .nav-menu__btn {
         top: 25%;
     }
+    .nav-menu__btn {
+        right: -25%;
+    }
     h2 {
         font-size: 22px;
     }
     .nav-logo {
         z-index: 4;
         top: 20px;
-        left: 28px;
+        left: 20px;
     }
     .menu-zone {
         top: 171px;
         right: -76px;
+    }
+    .link-text {
+        font-size: 20px;
     }
 
 }
